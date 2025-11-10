@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="hero relative h-screen w-screen overflow-hidden bg-[url('hero.png')] bg-cover bg-bottom">
+    <section className="hero relative h-screen w-screen overflow-hidden bg-[url('/hero.png')] bg-cover bg-bottom">
       <div className="relative m-auto flex h-full max-w-7xl flex-col items-center justify-center px-6 text-center">
         <h1 className="text-shadow-lg mb-4 text-4xl font-bold text-[#fff5e1] md:text-7xl">
           The One Halloween Page
