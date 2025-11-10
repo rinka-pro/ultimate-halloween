@@ -1,0 +1,159 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-typed: 'Special Elite', 'sans-serif';
+}
+
+:root {
+  font-family: 'Courier Prime', monospace;
+
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #f5f4f4;
+
+  background-color: #0c0a0a;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 40px;
+}
+body {
+  margin: 0;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  font-family: 'Special Elite', system-ui;
+}
+h2,
+h3,
+h4 {
+  font-family: 'Special Elite', system-ui;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Special Elite', system-ui;
+}
+
+.section {
+  background: linear-gradient(to top, #1a110e, #0c0a0a);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.3) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 0;
+}
+
+.divider-top:before,
+.divider-bottom:after {
+  content: '';
+  mask-size: 30% 100%;
+  mask-position: center top;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+  height: 64px;
+}
+.divider-top:before {
+  mask-image: url('/strip-b.svg');
+  top: -30px;
+  background-color: #0c0a0a;
+  z-index: 0;
+}
+.divider-bottom:after {
+  mask-image: url('/strip.svg');
+  bottom: -64px;
+  background-color: #1a110e;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 3px;
+}
+
+/* Chrome, Safari, Edge */
+input[type='range']::-webkit-slider-thumb {
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  background-image: url('/public/pumpkin_emoji.png');
+  background-size: 25px 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Firefox */
+input[type='range']::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  background-image: url('/public/pumpkin_emoji.png');
+  background-size: 25px 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+/* Edge/IE */
+input[type='range']::-ms-thumb {
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  background-image: url('/public/pumpkin_emoji.png');
+  background-size: 25px 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/public/film-grain.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
